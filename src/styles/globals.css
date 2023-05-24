@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.subtitle {
+  font-weight: bold;
+  color: #4c837a;
+  margin-bottom: 20px;
+}
