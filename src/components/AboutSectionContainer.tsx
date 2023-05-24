@@ -1,21 +1,27 @@
+import Image, { StaticImageData } from 'next/image';
+
 interface Props {
   children: React.ReactNode;
   className?: string;
   background?: string;
-  orientation?: 'left' | 'right';
+  side?: 'left' | 'right';
+  imageSrc: StaticImageData;
+  subtitle: string;
 }
 
 const AboutSectionContainer: React.FC<Props> = ({
   children,
   className = '',
   background,
-  orientation = 'left',
+  side = 'left',
+  imageSrc,
+  subtitle,
 }) => (
   <div
     className={`
       ${className}
       ${background ? `bg-[${background}]` : ''}
-      ${orientation === 'left' ? 'sm:text-left' : 'sm:text-right'}
+      ${side === 'left' ? 'sm:text-left' : 'sm:text-right'}
       flex
       flex-col
       gap-5
@@ -35,7 +41,21 @@ const AboutSectionContainer: React.FC<Props> = ({
       text-xl
     `}
   >
-    {children}
+    <div
+      className={`
+        ${side === 'left' ? 'sm:order-0' : 'sm:order-1'}
+        sm:basis-2/3 
+        md:basis-3/5 
+        xl:basis-1/2 
+        2xl:basis-1/3
+      `}
+    >
+      <h2 className='subtitle'>{subtitle}</h2>
+      {children}
+    </div>
+    <div>
+      <Image src={imageSrc} alt='Image' />
+    </div>
   </div>
 );
 
