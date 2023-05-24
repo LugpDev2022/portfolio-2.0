@@ -1,10 +1,11 @@
+import AboutSectionContainer from '@/components/AboutSectionContainer';
 import Image from 'next/image';
 import profilePhoto from '../../public/profile.png';
 
 export default function Home() {
   return (
     <>
-      <div className='flex justify-center items-center flex-col sm:flex-row py-6 gap-12'>
+      <AboutSectionContainer>
         <div className='bg-[#C6BF88] rounded-full overflow-hidden h-[250px] w-[250px]'>
           <Image alt='Photo' src={profilePhoto} />
         </div>
@@ -16,7 +17,9 @@ export default function Home() {
           </h1>
           <h2 className='text-xl'>Fronted Web Developer</h2>
         </div>
-      </div>
+      </AboutSectionContainer>
+
+      <div></div>
     </>
   );
 }
