@@ -40,6 +40,7 @@ const Navbar = () => {
     <nav
       className='
         bg-white 
+        fixed
         left-0 
         p-3 
         shadow-black/25 
