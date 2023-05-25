@@ -7,3 +7,16 @@
   color: #4c837a;
   margin-bottom: 20px;
 }
+
+.rotate-logos {
+  animation: rotate-logos-animation 10s linear infinite;
+}
+
+@keyframes rotate-logos-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

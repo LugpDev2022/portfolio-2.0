@@ -5,7 +5,10 @@ interface Props {
   className?: string;
   background?: string;
   side?: 'left' | 'right';
-  imageSrc: StaticImageData;
+  asset: {
+    type: 'image' | 'html';
+    content: any;
+  };
   subtitle: string;
 }
 
@@ -14,11 +17,12 @@ const AboutSectionContainer: React.FC<Props> = ({
   className = '',
   background,
   side = 'left',
-  imageSrc,
+  asset,
   subtitle,
-}) => (
-  <div
-    className={`
+}) => {
+  return (
+    <div
+      className={`
       ${className}
       ${background ? `bg-[${background}]` : ''}
       ${side === 'left' ? 'sm:text-left' : 'sm:text-right'}
@@ -40,23 +44,28 @@ const AboutSectionContainer: React.FC<Props> = ({
       text-center
       text-xl
     `}
-  >
-    <div
-      className={`
+    >
+      <div
+        className={`
         ${side === 'left' ? 'sm:order-0' : 'sm:order-1'}
         sm:basis-2/3 
         md:basis-3/5 
         xl:basis-1/2 
         2xl:basis-1/3
       `}
-    >
-      <h2 className='subtitle'>{subtitle}</h2>
-      {children}
+      >
+        <h2 className='subtitle'>{subtitle}</h2>
+        {children}
+      </div>
+      <div>
+        {asset.type === 'image' ? (
+          <Image src={asset.content} alt='Image' />
+        ) : (
+          asset.content
+        )}
+      </div>
     </div>
-    <div>
-      <Image src={imageSrc} alt='Image' />
-    </div>
-  </div>
-);
+  );
+};
 
 export default AboutSectionContainer;

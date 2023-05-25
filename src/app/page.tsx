@@ -1,5 +1,7 @@
 import AboutSectionContainer from '@/components/AboutSectionContainer';
+import SkillsetRoulette from '@/components/SkillsetRoulette';
 import Image from 'next/image';
+
 import profilePhoto from '../../public/profile.png';
 import aboutImage from '../../public/about.png';
 import languagesImage from '../../public/languages.png';
@@ -35,7 +37,7 @@ export default function Home() {
       <AboutSectionContainer
         background='#C6BF88'
         subtitle='About Me'
-        imageSrc={aboutImage}
+        asset={{ type: 'image', content: aboutImage }}
       >
         <p className='text-white'>
           Hi! I&apos;m Luis, a frontend developer born in Mexico. Since I was in
@@ -48,7 +50,7 @@ export default function Home() {
 
       <AboutSectionContainer
         subtitle='Languages'
-        imageSrc={languagesImage}
+        asset={{ type: 'image', content: languagesImage }}
         side='right'
       >
         <p className='text-[#67958E]'>
@@ -57,6 +59,20 @@ export default function Home() {
           classes 3 years ago, so I have an intermediate level in that language.
           My next objective is to learn Japanese because I am a big fan of
           anime.
+        </p>
+      </AboutSectionContainer>
+
+      <AboutSectionContainer
+        background='#C6BF88'
+        subtitle='Skillset'
+        asset={{ type: 'html', content: <SkillsetRoulette /> }}
+      >
+        <p className='text-white'>
+          As I mentioned, I&apos;m a frontend web developer. That means I
+          specialize in the client-side environment and have knowledge of
+          libraries and frameworks like React, Next.js, Bootstrap, and Tailwind
+          CSS. These technologies allow me to create a great user experience in
+          a short amount of time.
         </p>
       </AboutSectionContainer>
     </>
