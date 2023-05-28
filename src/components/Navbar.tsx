@@ -50,6 +50,7 @@ const Navbar = () => {
         sm:px-8 
         top-0 
         w-full
+        z-10
       '
     >
       <div className='flex justify-between sm:me-16'>

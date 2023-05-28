@@ -6,10 +6,29 @@
   font-weight: bold;
   color: #4c837a;
   margin-bottom: 20px;
+  font-size: 20px;
 }
 
 .rotate-logos {
   animation: rotate-logos-animation 10s linear infinite;
+}
+
+.btn-primary {
+  background-color: #4c837a;
+  border-radius: 25px;
+  color: white;
+  flex-basis: 100vw;
+  font-weight: bold;
+  margin: auto auto;
+  max-width: 400px;
+  padding: 10px 30px;
+  text-align: center;
+  transition: 300ms;
+  width: 100%;
+}
+
+.btn-primary:hover {
+  background-color: #24403b;
 }
 
 @keyframes rotate-logos-animation {

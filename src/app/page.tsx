@@ -5,6 +5,7 @@ import Image from 'next/image';
 import profilePhoto from '../../public/profile.png';
 import aboutImage from '../../public/about.png';
 import languagesImage from '../../public/languages.png';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -75,6 +76,29 @@ export default function Home() {
           a short amount of time.
         </p>
       </AboutSectionContainer>
+
+      <div
+        className='
+          p-5
+          py-6  
+          sm:px-10
+          sm:py-12
+          md:px-14
+          lg:px-24
+          xl:px-36
+        '
+      >
+        <h2 className='subtitle block text-center'>What&apos;s next?</h2>
+
+        <div className='grid grid-rows-2 grid-flow-col gap-4 sm:grid-rows-1 items-center'>
+          <Link href='/projects' className='btn-primary'>
+            Check out my work
+          </Link>
+          <Link href='/contact' className='btn-primary'>
+            Let&apos;s get in touch
+          </Link>
+        </div>
+      </div>
     </>
   );
 }
