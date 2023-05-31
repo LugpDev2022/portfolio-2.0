@@ -17,14 +17,12 @@
   background-color: #4c837a;
   border-radius: 25px;
   color: white;
-  flex-basis: 100vw;
   font-weight: bold;
-  margin: auto auto;
-  max-width: 400px;
   padding: 10px 30px;
   text-align: center;
   transition: 300ms;
   width: 100%;
+  height: 44px;
 }
 
 .btn-primary:hover {
@@ -37,5 +35,11 @@
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@media (min-width: 700px) {
+  .btn-primary {
+    max-width: 300px;
   }
 }

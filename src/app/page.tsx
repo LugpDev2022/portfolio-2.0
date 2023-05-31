@@ -90,7 +90,15 @@ export default function Home() {
       >
         <h2 className='subtitle block text-center'>What&apos;s next?</h2>
 
-        <div className='grid grid-rows-2 grid-flow-col gap-4 sm:grid-rows-1 items-center'>
+        <div
+          className='
+            flex
+            flex-wrap
+            justify-center
+            gap-5
+            md:gap-10
+          '
+        >
           <Link href='/projects' className='btn-primary'>
             Check out my work
           </Link>
