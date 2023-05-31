@@ -33,16 +33,16 @@ const AboutSectionContainer: React.FC<Props> = ({
       justify-between
       p-5
       py-6
+      text-center
+      text-xl
       sm:flex-row
       sm:px-10
       sm:py-12
       md:px-14
       lg:px-24
       xl:px-36
-      2xl:justify-center
-      2xl:gap-20
-      text-center
-      text-xl
+      2xl:justify-around
+      
     `}
     >
       <div
