@@ -9,7 +9,7 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <>
+    <div className='animate__animated animate__fadeIn'>
       <div
         className='
           flex
@@ -107,6 +107,6 @@ export default function Home() {
           </Link>
         </div>
       </div>
-    </>
+    </div>
   );
 }

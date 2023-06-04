@@ -25,7 +25,7 @@ const Project: React.FC<Props> = ({
       overflow-hidden 
       rounded-lg 
       max-w-xl
-    `}
+      `}
   >
     <a href={url} target='_blank'>
       <Image src={image} alt='Project Screenshot' />

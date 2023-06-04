@@ -22,6 +22,8 @@ const page = () => {
         h-[calc(100vh-64px-72px)] 
         sm:h-[calc(100vh-40px-72px)]
         px-3
+        animate__animated
+        animate__fadeIn
       `}
     >
       {projectsArray.map((project, i) => (
