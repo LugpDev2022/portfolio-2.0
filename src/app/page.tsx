@@ -2,9 +2,9 @@ import AboutSectionContainer from '@/components/AboutSectionContainer';
 import SkillsetRoulette from '@/components/SkillsetRoulette';
 import Image from 'next/image';
 
-import profilePhoto from '../../public/profile.png';
-import aboutImage from '../../public/about.png';
-import languagesImage from '../../public/languages.png';
+import profilePhoto from '../../public/assets/profile.png';
+import aboutImage from '../../public/assets/about.png';
+import languagesImage from '../../public/assets/languages.png';
 import Link from 'next/link';
 
 export default function Home() {

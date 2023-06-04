@@ -7,7 +7,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import logo from '../../public/logo.svg';
-import menuIcon from '../../public/menu.png';
+import menuIcon from '../../public/icons/menu.png';
 
 interface NavLinkProps {
   children: React.ReactNode;

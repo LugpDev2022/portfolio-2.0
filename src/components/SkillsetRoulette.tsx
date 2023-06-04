@@ -1,12 +1,12 @@
 import Image from 'next/image';
 
-import reactLogo from '../../public/reactLogo.png';
-import nextLogo from '../../public/nextLogo.png';
-import jsLogo from '../../public/jsLogo.png';
-import gitLogo from '../../public/gitLogo.png';
-import tailwindLogo from '../../public/tailwindcssLogo.png';
-import bootstrapLogo from '../../public/bootstrapLogo.png';
-import tsLogo from '../../public/tsLogo.png';
+import reactLogo from '../../public/techLogos/reactLogo.png';
+import nextLogo from '../../public/techLogos/nextLogo.png';
+import jsLogo from '../../public/techLogos/jsLogo.png';
+import gitLogo from '../../public/techLogos/gitLogo.png';
+import tailwindLogo from '../../public/techLogos/tailwindcssLogo.png';
+import bootstrapLogo from '../../public/techLogos/bootstrapLogo.png';
+import tsLogo from '../../public/techLogos/tsLogo.png';
 
 const SkillsetRoulette = () => (
   <div

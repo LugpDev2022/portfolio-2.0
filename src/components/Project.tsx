@@ -1,7 +1,7 @@
 import Image, { StaticImageData } from 'next/image';
 
-import githubIcon from '../../public/github-mark.svg';
-import linkIcon from '../../public/url.png';
+import githubIcon from '../../public/icons/github-mark.svg';
+import linkIcon from '../../public/icons/url.png';
 
 interface Props {
   githubUrl?: string;
