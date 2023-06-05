@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 
 import Image from 'next/image';
@@ -8,33 +8,20 @@ import Link from 'next/link';
 
 import logo from '../../public/logo.svg';
 import menuIcon from '../../public/icons/menu.png';
-
-interface NavLinkProps {
-  children: React.ReactNode;
-  href: string;
-  path: string;
-}
-
-const NavLink: React.FC<NavLinkProps> = ({ children, href, path }) => (
-  <li className='mt-4 sm:mt-0 flex flex-col justify-center'>
-    <Link
-      className={`
-        ${path === href ? 'text-[#4C837A]' : 'text-[#85BAB1]'}
-        hover:text-[#4C837A] 
-        transition 
-        duration-200
-      `}
-      href={href}
-    >
-      {children}
-    </Link>
-  </li>
-);
+import NavLink from './NavLink';
 
 //TODO: Add animation when showing mobile navbar
 const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState<boolean>(false);
   const path = usePathname();
+
+  useEffect(() => {
+    const position = localStorage.getItem('homeScrollPosition');
+
+    if (!position) return scrollTo(0, 0);
+
+    scrollTo(0, Number(position));
+  }, [path]);
 
   return (
     <nav
