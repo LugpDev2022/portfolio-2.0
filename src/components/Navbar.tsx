@@ -18,10 +18,16 @@ const Navbar = () => {
   useEffect(() => {
     const position = localStorage.getItem('homeScrollPosition');
 
-    if (!position) return scrollTo(0, 0);
+    if (!position) return;
 
     scrollTo(0, Number(position));
   }, [path]);
+
+  useEffect(() => {
+    window.addEventListener('unload', () => {
+      localStorage.removeItem('homeScrollPosition');
+    });
+  }, []);
 
   return (
     <nav
