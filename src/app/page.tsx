@@ -6,6 +6,7 @@ import profilePhoto from '../../public/assets/profile.png';
 import aboutImage from '../../public/assets/about.png';
 import languagesImage from '../../public/assets/languages.png';
 import Link from 'next/link';
+import HomeButton from '@/components/HomeButton';
 
 export default function Home() {
   return (
@@ -99,12 +100,9 @@ export default function Home() {
             md:gap-10
           '
         >
-          <Link href='/projects' className='btn-primary'>
-            Check out my work
-          </Link>
-          <Link href='/contact' className='btn-primary'>
-            Let&apos;s get in touch
-          </Link>
+          <HomeButton href='/projects'>Check out my work</HomeButton>
+
+          <HomeButton href='/contact'>Let&apos;s get in touch</HomeButton>
         </div>
       </div>
     </div>
