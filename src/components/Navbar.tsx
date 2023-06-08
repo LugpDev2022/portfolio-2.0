@@ -74,11 +74,11 @@ const Navbar = () => {
         <NavLink path={path} href='/'>
           About
         </NavLink>
-        <NavLink path={path} href='/projects'>
-          Projects
+        <NavLink path={path} href='/portfolio'>
+          Portfolio
         </NavLink>
-        <NavLink path={path} href='/contact'>
-          Contact
+        <NavLink path={path} href='/services'>
+          Services
         </NavLink>
       </ul>
     </nav>

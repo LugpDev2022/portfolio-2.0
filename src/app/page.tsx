@@ -5,7 +5,6 @@ import Image from 'next/image';
 import profilePhoto from '../../public/assets/profile.png';
 import aboutImage from '../../public/assets/about.png';
 import languagesImage from '../../public/assets/languages.png';
-import Link from 'next/link';
 import HomeButton from '@/components/HomeButton';
 
 export default function Home() {
@@ -41,7 +40,7 @@ export default function Home() {
         subtitle='About Me'
         asset={{ type: 'image', content: aboutImage }}
       >
-        <p className='text-white'>
+        <p className='text-[#67958E]'>
           Hi! I&apos;m Luis, a frontend developer born in Mexico. Since I was in
           elementary school, I knew I wanted to dedicate my life to technology.
           My dream is to someday work for a big tech company, so I&apos;m
@@ -69,7 +68,7 @@ export default function Home() {
         subtitle='Skillset'
         asset={{ type: 'html', content: <SkillsetRoulette /> }}
       >
-        <p className='text-white'>
+        <p className='text-[#67958E]'>
           As I mentioned, I&apos;m a frontend web developer. That means I
           specialize in the client-side environment and have knowledge of
           libraries and frameworks like React, Next.js, Bootstrap, and Tailwind
@@ -100,9 +99,9 @@ export default function Home() {
             md:gap-10
           '
         >
-          <HomeButton href='/projects'>Check out my work</HomeButton>
+          <HomeButton href='/portfolio'>Check out my work</HomeButton>
 
-          <HomeButton href='/contact'>Let&apos;s get in touch</HomeButton>
+          <HomeButton href='/services'>Let&apos;s get in touch</HomeButton>
         </div>
       </div>
     </div>
