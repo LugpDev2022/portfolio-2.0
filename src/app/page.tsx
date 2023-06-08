@@ -94,7 +94,7 @@ export default function Home() {
         >
           <HomeButton href='/portfolio'>Check out my work</HomeButton>
 
-          <HomeButton href='/services'>Let&apos;s get in touch</HomeButton>
+          <HomeButton href='/services'>Explore my services</HomeButton>
         </div>
       </div>
     </div>
