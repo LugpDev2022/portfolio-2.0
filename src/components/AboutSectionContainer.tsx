@@ -55,7 +55,7 @@ const AboutSectionContainer: React.FC<Props> = ({
       `}
       >
         <h2 className='subtitle'>{subtitle}</h2>
-        {children}
+        <p className='text-[#67958E]'>{children}</p>
       </div>
       <div>
         {asset.type === 'image' ? (

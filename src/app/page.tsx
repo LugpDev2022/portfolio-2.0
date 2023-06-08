@@ -40,13 +40,11 @@ export default function Home() {
         subtitle='About Me'
         asset={{ type: 'image', content: aboutImage }}
       >
-        <p className='text-[#67958E]'>
-          Hi! I&apos;m Luis, a frontend developer born in Mexico. Since I was in
-          elementary school, I knew I wanted to dedicate my life to technology.
-          My dream is to someday work for a big tech company, so I&apos;m
-          actively working towards it. I would also be grateful to help you
-          fulfill your dream.
-        </p>
+        Hi! I&apos;m Luis, a frontend developer born in Mexico. Since I was in
+        elementary school, I knew I wanted to dedicate my life to technology. My
+        dream is to someday work for a big tech company, so I&apos;m actively
+        working towards it. I would also be grateful to help you fulfill your
+        dream.
       </AboutSectionContainer>
 
       <AboutSectionContainer
@@ -54,13 +52,10 @@ export default function Home() {
         asset={{ type: 'image', content: languagesImage }}
         side='right'
       >
-        <p className='text-[#67958E]'>
-          I&apos;m Mexican, so Spanish is my native language. However, I have
-          been studying English for over 10 years and started taking French
-          classes 3 years ago, so I have an intermediate level in that language.
-          My next objective is to learn Japanese because I am a big fan of
-          anime.
-        </p>
+        I&apos;m Mexican, so Spanish is my native language. However, I have been
+        studying English for over 10 years and started taking French classes 3
+        years ago, so I have an intermediate level in that language. My next
+        objective is to learn Japanese because I am a big fan of anime.
       </AboutSectionContainer>
 
       <AboutSectionContainer
@@ -68,13 +63,11 @@ export default function Home() {
         subtitle='Skillset'
         asset={{ type: 'html', content: <SkillsetRoulette /> }}
       >
-        <p className='text-[#67958E]'>
-          As I mentioned, I&apos;m a frontend web developer. That means I
-          specialize in the client-side environment and have knowledge of
-          libraries and frameworks like React, Next.js, Bootstrap, and Tailwind
-          CSS. These technologies allow me to create a great user experience in
-          a short amount of time.
-        </p>
+        As I mentioned, I&apos;m a frontend web developer. That means I
+        specialize in the client-side environment and have knowledge of
+        libraries and frameworks like React, Next.js, Bootstrap, and Tailwind
+        CSS. These technologies allow me to create a great user experience in a
+        short amount of time.
       </AboutSectionContainer>
 
       <div
