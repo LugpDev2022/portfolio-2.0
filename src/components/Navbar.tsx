@@ -18,9 +18,10 @@ const Navbar = () => {
   useEffect(() => {
     const position = localStorage.getItem('homeScrollPosition');
 
-    if (!position) return;
+    if (!position || path !== '/') return;
 
     scrollTo(0, Number(position));
+    console.log('scroll');
   }, [path]);
 
   useEffect(() => {

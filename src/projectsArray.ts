@@ -37,13 +37,13 @@ const projectsArray: Array<Project> = [
     githubUrl: 'https://github.com/LugpDev2022/time-app',
   },
   {
-    title: 'Test',
+    title: 'Test2',
     image: timeApp,
     demoUrl: 'https://time-app-lugpdev2022.netlify.app/',
     githubUrl: 'https://github.com/LugpDev2022/time-app',
   },
   {
-    title: 'Test',
+    title: 'Test3',
     image: timeApp,
     demoUrl: 'https://time-app-lugpdev2022.netlify.app/',
     githubUrl: 'https://github.com/LugpDev2022/time-app',
