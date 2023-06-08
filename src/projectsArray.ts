@@ -7,28 +7,46 @@ import timeApp from '../public/projects/todoApp.png';
 type Project = {
   title: string;
   image: StaticImageData;
-  url: string;
-  github?: string;
+  demoUrl: string;
+  githubUrl?: string;
 };
 
 const projectsArray: Array<Project> = [
   {
     title: 'Todo App',
     image: todoApp,
-    url: 'https://lugp-todo-app.netlify.app/',
-    github: 'https://github.com/LugpDev2022/todo-app',
+    demoUrl: 'https://lugp-todo-app.netlify.app/',
+    githubUrl: 'https://github.com/LugpDev2022/todo-app',
   },
   {
     title: 'Advice App',
     image: adviceApp,
-    url: 'https://advice-generator-lugpdev2022.netlify.app/',
-    github: 'https://github.com/LugpDev2022/advice-generator',
+    demoUrl: 'https://advice-generator-lugpdev2022.netlify.app/',
+    githubUrl: 'https://github.com/LugpDev2022/advice-generator',
   },
   {
     title: 'Time App',
     image: timeApp,
-    url: 'https://time-app-lugpdev2022.netlify.app/',
-    github: 'https://github.com/LugpDev2022/time-app',
+    demoUrl: 'https://time-app-lugpdev2022.netlify.app/',
+    githubUrl: 'https://github.com/LugpDev2022/time-app',
+  },
+  {
+    title: 'Test',
+    image: timeApp,
+    demoUrl: 'https://time-app-lugpdev2022.netlify.app/',
+    githubUrl: 'https://github.com/LugpDev2022/time-app',
+  },
+  {
+    title: 'Test',
+    image: timeApp,
+    demoUrl: 'https://time-app-lugpdev2022.netlify.app/',
+    githubUrl: 'https://github.com/LugpDev2022/time-app',
+  },
+  {
+    title: 'Test',
+    image: timeApp,
+    demoUrl: 'https://time-app-lugpdev2022.netlify.app/',
+    githubUrl: 'https://github.com/LugpDev2022/time-app',
   },
 ];
 

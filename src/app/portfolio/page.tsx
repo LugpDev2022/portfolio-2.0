@@ -1,43 +1,28 @@
 'use client';
 
-import { useState } from 'react';
-
-import SliderControl from '@/components/SliderControl';
 import Project from '@/components/Project';
-
 import projectsArray from '@/projectsArray';
 
-const page = () => {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const [shownImage, setShownImage] = useState<number>(0);
-
-  return (
-    <div
-      className={`
-        flex
-        flex-col
-        gap-12
-        items-center
-        justify-center
-        h-[calc(100vh-64px-72px)] 
-        sm:h-[calc(100vh-40px-72px)]
-        px-3
+const page = () => (
+  <div
+    className={`
         animate__animated
         animate__fadeIn
+        flex
+        flex-row
+        flex-wrap
+        justify-center
+        p-7
+        gap-7
+        lg:p-10
+        lg:gap-10
       `}
-    >
-      {projectsArray.map((project, i) => (
-        <Project
-          key={project.title}
-          {...project}
-          githubUrl={project?.github}
-          isHidden={shownImage !== i}
-        />
-      ))}
-
-      <SliderControl handleChange={setShownImage} activeImage={shownImage} />
-    </div>
-  );
-};
+  >
+    <h3 className='subtitle sm:hidden w-full text-center'>Portfolio</h3>
+    {projectsArray.map((project, i) => (
+      <Project key={project.title} {...project} />
+    ))}
+  </div>
+);
 
 export default page;

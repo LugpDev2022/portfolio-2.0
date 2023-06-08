@@ -1,69 +1,69 @@
 import Image, { StaticImageData } from 'next/image';
 
-import githubIcon from '../../public/icons/github-mark.svg';
-import linkIcon from '../../public/icons/url.png';
-
 interface Props {
   githubUrl?: string;
   image: StaticImageData;
-  isHidden?: boolean;
   title: string;
-  url: string;
+  demoUrl: string;
 }
 
-const Project: React.FC<Props> = ({
-  githubUrl,
-  image,
-  isHidden,
-  title,
-  url,
-}) => (
+const Project: React.FC<Props> = ({ githubUrl, image, title, demoUrl }) => (
   <div
-    className={`
-      ${isHidden ? 'hidden' : ''}
-      relative 
-      overflow-hidden 
-      rounded-lg 
-      max-w-xl
-      `}
-  >
-    <a href={url} target='_blank'>
-      <Image src={image} alt='Project Screenshot' />
-    </a>
-
-    <div
-      className='
-      absolute
+    className='
       bg-[#C6BF88] 
-      bottom-0
-      left-0
-      w-full 
-      font-bold
-      flex
-      justify-center
-      items-center
-      py-1
-      sm:justify-between
-      sm:px-4
-      sm:py-2
+      max-w-[350px]
+      p-4
+      pt-6
+      rounded-tr-[15px] 
+      rounded-lb-[15px]
+      rounded-tl-[50px]
+      rounded-br-[50px]
+      hover:shadow-lg
+      hover:shadow-gray-500
+      transition
     '
+  >
+    <Image src={image} alt='Project Image' />
+
+    <h4 className='mt-5 mb-7 font-bold text-[#4C837A] text-xl'>{title}</h4>
+
+    <a
+      href={demoUrl}
+      target='_blank'
+      rel='noopener noreferrer'
+      className='
+        bg-[#4C837A] 
+        text-white 
+        hover:bg-[#24403B]
+        font-semibold 
+        me-5
+        p-2 
+        rounded-lg 
+        transition
+      '
     >
-      <a href={url} target='_blank' className='text-[#4C837A]'>
-        {title}
+      Live Demo
+    </a>
+    {githubUrl && (
+      <a
+        href={githubUrl}
+        target='_blank'
+        rel='noopener noreferrer'
+        className='
+          border-[#24403B] 
+          text-[#24403B] 
+          hover:border-[#4C837A]
+          hover:text-[#4C837A]
+          border-2 
+          font-semibold 
+          p-2 
+          rounded-lg
+          transition
+        '
+      >
+        Github
       </a>
-
-      <div className='hidden sm:flex gap-4 '>
-        {githubUrl && (
-          <a href={githubUrl} className='w-6' target='_blank'>
-            <Image src={githubIcon} alt='github' />
-          </a>
-        )}
-
-        <a href={url} className='w-6' target='_blank'>
-          <Image src={linkIcon} alt='link' />
-        </a>
-      </div>
-    </div>
+    )}
   </div>
 );
 

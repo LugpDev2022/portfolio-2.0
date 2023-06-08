@@ -81,7 +81,7 @@ export default function Home() {
           xl:px-36
         '
       >
-        <h2 className='subtitle block text-center'>What&apos;s next?</h2>
+        <h3 className='subtitle block text-center'>What&apos;s next?</h3>
 
         <div
           className='
@@ -93,7 +93,6 @@ export default function Home() {
           '
         >
           <HomeButton href='/portfolio'>Check out my work</HomeButton>
-
           <HomeButton href='/services'>Explore my services</HomeButton>
         </div>
       </div>

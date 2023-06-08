@@ -54,7 +54,7 @@ const AboutSectionContainer: React.FC<Props> = ({
         2xl:basis-1/3
       `}
       >
-        <h2 className='subtitle'>{subtitle}</h2>
+        <h3 className='subtitle'>{subtitle}</h3>
         <p className='text-[#67958E]'>{children}</p>
       </div>
       <div>
