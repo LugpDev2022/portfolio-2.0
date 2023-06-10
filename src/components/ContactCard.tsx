@@ -11,7 +11,7 @@ const ContactCard: React.FC<Props> = ({ icon, label, href, contact }) => (
   <div
     className='
         bg-[#C6BF88]
-        w-[250px]
+        w-full
         flex
         flex-col
         items-center
@@ -20,6 +20,7 @@ const ContactCard: React.FC<Props> = ({ icon, label, href, contact }) => (
         rounded-2xl
         font-semibold
         text-xl
+        px-3
       '
   >
     <Image src={icon} alt='Social media icon' />
