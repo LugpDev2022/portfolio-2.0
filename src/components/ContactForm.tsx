@@ -1,5 +1,6 @@
 'use client';
 
+import { getFormErrors } from '@/helpers/getFormErrors';
 import { Field, Formik } from 'formik';
 
 const ContactForm = () => {
@@ -11,6 +12,9 @@ const ContactForm = () => {
         message: '',
       }}
       onSubmit={(values) => console.log(values)}
+      validate={getFormErrors}
+      validateOnChange={false}
+      validateOnBlur={false}
     >
       {(props) => (
         <form
@@ -27,7 +31,7 @@ const ContactForm = () => {
               className='contact-input'
               onChange={props.handleChange}
             />
-            <span className='form-error'></span>
+            <span className='form-error'>{props.errors.name}</span>
           </div>
           <div className='relative'>
             <label className='input-label'>Email</label>
@@ -39,7 +43,7 @@ const ContactForm = () => {
               className='contact-input'
               onChange={props.handleChange}
             />
-            <span className='form-error'></span>
+            <span className='form-error'>{props.errors.email}</span>
           </div>
           <div className='relative'>
             <label className='input-label'>Message</label>
@@ -53,7 +57,7 @@ const ContactForm = () => {
               onChange={props.handleChange}
             />
 
-            <span className='form-error'></span>
+            <span className='form-error'>{props.errors.message}</span>
           </div>
 
           <button className='form-btn' type='submit'>
