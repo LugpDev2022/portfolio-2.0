@@ -59,9 +59,33 @@
   letter-spacing: 2px;
   color: #4c837a;
 }
-
 .contact-input::placeholder {
   color: #85bab1;
+}
+
+.form-error {
+  color: #dc2626;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  position: absolute;
+  right: 4px;
+  top: -20px;
+}
+
+.form-btn {
+  background-color: #4c837a;
+  border-radius: 12px;
+  color: white;
+  font-weight: bold;
+  height: 44px;
+  text-align: center;
+  transition: 200ms;
+  width: 100%;
+}
+
+.form-btn:hover {
+  background-color: #24403b;
 }
 
 @keyframes rotate-logos-animation {

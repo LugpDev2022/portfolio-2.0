@@ -27,7 +27,7 @@ const ContactForm = () => {
               className='contact-input'
               onChange={props.handleChange}
             />
-            <span className='absolute right-1 -top-5 text-sm text-red-600 font-semibold'></span>
+            <span className='form-error'></span>
           </div>
           <div className='relative'>
             <label className='input-label'>Email</label>
@@ -39,7 +39,7 @@ const ContactForm = () => {
               className='contact-input'
               onChange={props.handleChange}
             />
-            <span className='absolute right-1 -top-5 text-sm text-red-600 font-semibold'></span>
+            <span className='form-error'></span>
           </div>
           <div className='relative'>
             <label className='input-label'>Message</label>
@@ -53,22 +53,10 @@ const ContactForm = () => {
               onChange={props.handleChange}
             />
 
-            <span className='absolute right-1 -top-5 text-sm text-red-600 font-semibold'></span>
+            <span className='form-error'></span>
           </div>
 
-          <button
-            className='
-              bg-[#4c837a] 
-              hover:bg-[#24403b]
-              rounded-xl
-              h-11
-              text-white
-              font-bold
-              text-center
-              w-full
-            '
-            type='submit'
-          >
+          <button className='form-btn' type='submit'>
             Send Message
           </button>
         </form>
