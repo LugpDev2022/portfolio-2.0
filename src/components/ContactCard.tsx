@@ -27,7 +27,7 @@ const ContactCard: React.FC<Props> = ({ icon, label, href, contact }) => (
 
     <div>
       <span className='text-[#4C837A] block w-full text-center'>{label}</span>
-      <span className='text-[#85BAB1] block w-full text-center'>{contact}</span>
+      <span className='text-[#67958E] block w-full text-center'>{contact}</span>
     </div>
 
     <a
