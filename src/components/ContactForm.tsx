@@ -1,7 +1,8 @@
 'use client';
 
-import { getFormErrors } from '@/helpers/getFormErrors';
 import { Field, Formik } from 'formik';
+import emailjs from '@emailjs/browser';
+import { getFormErrors } from '@/helpers/getFormErrors';
 
 const ContactForm = () => {
   return (
@@ -11,7 +12,21 @@ const ContactForm = () => {
         email: '',
         message: '',
       }}
-      onSubmit={(values) => console.log(values)}
+      onSubmit={async (values) => {
+        const serviceId: any = process.env.NEXT_PUBLIC_EMAILJS_GMAIL_ID;
+        const templateId: any = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+        const userId: any = process.env.NEXT_PUBLIC_EMAILJS_USER_ID;
+        try {
+          const response = await emailjs.send(
+            serviceId,
+            templateId,
+            values,
+            userId
+          );
+        } catch (e) {
+          console.log(e);
+        }
+      }}
       validate={getFormErrors}
       validateOnChange={false}
       validateOnBlur={false}
