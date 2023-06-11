@@ -1,5 +1,6 @@
 'use client';
 
+import { getFormErrors } from '@/helpers/getFormErrors';
 import { useForm } from '@/hooks/useForm';
 
 const ContactForm = () => {
@@ -12,21 +13,7 @@ const ContactForm = () => {
   const handleSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault();
 
-    const errors = {
-      email: '',
-      name: '',
-      message: '',
-    };
-
-    const { name, email, message }: any = formState;
-
-    if (!name) errors.name = 'Name is required';
-
-    if (!email) errors.email = 'Email is required';
-    else if (!email.includes('@')) errors.email = 'Email is not valid';
-
-    if (!message) errors.message = 'Message is required';
-    else if (message.length <= 5) errors.message = 'Message is too short';
+    const errors = getFormErrors(formState);
 
     console.log(errors);
   };
