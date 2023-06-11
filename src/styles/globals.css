@@ -35,15 +35,29 @@
 .contact-input {
   background-color: #e1ddbf;
   border-radius: 10px;
-  border: 1px solid #4c837a;
+  border: 2px solid #4c837a;
   color: #4c837a;
   font-size: 20px;
   min-height: 50px;
   outline: none;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
   resize: none;
   width: 100%;
+}
+
+.input-label {
+  position: absolute;
+  top: -10px;
+  left: 32px;
+  background-color: #e1ddbf;
+  padding: 0 5px;
+  border-left: 2px solid #4c837a;
+  border-right: 2px solid #4c837a;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #4c837a;
 }
 
 .contact-input::placeholder {

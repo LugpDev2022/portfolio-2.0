@@ -8,7 +8,7 @@ export const getFormErrors = (formState: any) => {
   const { name, email, message } = formState;
 
   if (!name) errors.name = 'Name is required';
-  else if (name.length <= 5) errors.name = 'Write your full name';
+  else if (name.length <= 2) errors.name = 'Write a valid name';
 
   if (!email) errors.email = 'Email is required';
   else if (!email.includes('@') || email.length < 5)
