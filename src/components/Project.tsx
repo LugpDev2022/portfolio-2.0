@@ -23,7 +23,7 @@ const Project: React.FC<Props> = ({ githubUrl, image, title, demoUrl }) => (
       transition
     '
   >
-    <Image src={image} alt='Project Image' />
+    <Image src={image} alt='Project Image' className='rounded-lg' />
 
     <h4 className='mt-5 mb-7 font-bold text-[#4C837A] text-xl'>{title}</h4>
 
