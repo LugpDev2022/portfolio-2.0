@@ -25,7 +25,7 @@ const Navbar = () => {
   }, [path]);
 
   useEffect(() => {
-    window.addEventListener('unload', () => {
+    window.addEventListener('pagehide', () => {
       localStorage.removeItem('homeScrollPosition');
     });
   }, []);
