@@ -5,27 +5,34 @@ import emailjs from '@emailjs/browser';
 import { getFormErrors } from '@/helpers/getFormErrors';
 
 const ContactForm = () => {
-  return (
-    <Formik
-      initialValues={{
+  const handleBlur = (formValues: any) => {
+    localStorage.setItem('formValues', JSON.stringify(formValues));
+  };
+
+  const localStorageFormValues = localStorage.getItem('formValues');
+
+  const initialValues = localStorageFormValues
+    ? JSON.parse(localStorageFormValues)
+    : {
         name: '',
         email: '',
         message: '',
-      }}
+      };
+
+  return (
+    <Formik
+      initialValues={initialValues}
       onSubmit={async (values) => {
         const serviceId: any = process.env.NEXT_PUBLIC_EMAILJS_GMAIL_ID;
         const templateId: any = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
         const userId: any = process.env.NEXT_PUBLIC_EMAILJS_USER_ID;
-        try {
-          const response = await emailjs.send(
-            serviceId,
-            templateId,
-            values,
-            userId
-          );
-        } catch (e) {
-          console.log(e);
-        }
+
+        // const response = await emailjs.send(
+        //   serviceId,
+        //   templateId,
+        //   values,
+        //   userId
+        // );
       }}
       validate={getFormErrors}
       validateOnChange={false}
@@ -45,8 +52,11 @@ const ContactForm = () => {
               value={props.values.name}
               className='contact-input'
               onChange={props.handleChange}
+              onBlur={() => handleBlur(props.values)}
             />
-            <span className='form-error'>{props.errors.name}</span>
+            {props.errors.name && (
+              <span className='form-error'>{String(props.errors.name)}</span>
+            )}
           </div>
           <div className='relative'>
             <label className='input-label'>Email</label>
@@ -57,8 +67,11 @@ const ContactForm = () => {
               value={props.values.email}
               className='contact-input'
               onChange={props.handleChange}
+              onBlur={() => handleBlur(props.values)}
             />
-            <span className='form-error'>{props.errors.email}</span>
+            {props.errors.email && (
+              <span className='form-error'>{String(props.errors.email)}</span>
+            )}
           </div>
           <div className='relative'>
             <label className='input-label'>Message</label>
@@ -70,9 +83,11 @@ const ContactForm = () => {
               value={props.values.message}
               className='contact-input py-3'
               onChange={props.handleChange}
+              onBlur={() => handleBlur(props.values)}
             />
-
-            <span className='form-error'>{props.errors.message}</span>
+            {props.errors.message && (
+              <span className='form-error'>{String(props.errors.message)}</span>
+            )}
           </div>
 
           <button className='form-btn' type='submit'>
