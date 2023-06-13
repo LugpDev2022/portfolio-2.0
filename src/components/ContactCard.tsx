@@ -23,7 +23,7 @@ const ContactCard: React.FC<Props> = ({ icon, label, href, contact }) => (
         px-3
       '
   >
-    <Image src={icon} alt='Social media icon' />
+    <Image src={icon} alt='Social media icon' width={40} height={40} />
 
     <div>
       <span className='text-[#4C837A] block w-full text-center'>{label}</span>

@@ -38,7 +38,7 @@ const ContactForm = () => {
           className='flex flex-col gap-7 justify-around md:col-span-2 h-full'
           onSubmit={props.handleSubmit}
         >
-          <div className='relative'>
+          <div className='relative mt-3'>
             <label className='input-label'>Name</label>
             <Field
               name='name'

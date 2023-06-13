@@ -1,9 +1,10 @@
 import ContactCard from '@/components/ContactCard';
 import ServiceCard from '@/components/ServiceCard';
+import ContactForm from '@/components/ContactForm';
 
 import emailIcon from '../../../public/icons/email.png';
 import whatsappIcon from '../../../public/icons/whatsapp.png';
-import ContactForm from '@/components/ContactForm';
+import linkedinIcon from '../../../public/icons/linkedin.png';
 
 const page = () => (
   <div className='animate__animated animate__fadeIn py-12'>
@@ -38,21 +39,21 @@ const page = () => (
         '
       >
         <ContactCard
-          icon={emailIcon}
+          icon={linkedinIcon}
           label='Linkedin'
-          href='/'
-          contact='@user'
+          href='https://www.linkedin.com/in/luiscerv/'
+          contact='Luis Cervantes'
         />
         <ContactCard
           icon={emailIcon}
           label='Email'
-          href='/'
+          href='mailto:lugpdev@gmail.com'
           contact='lugpdev@gmail.com'
         />
         <ContactCard
           icon={whatsappIcon}
           label='WhatsApp'
-          href='/'
+          href=' https://wa.me/527778957110'
           contact='777-895-7110'
         />
       </div>
