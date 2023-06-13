@@ -21,15 +21,10 @@ const ContactForm = () => {
         const templateId: any = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
         const userId: any = process.env.NEXT_PUBLIC_EMAILJS_USER_ID;
         try {
-          const response = await emailjs.send(
-            serviceId,
-            templateId,
-            values,
-            userId
-          );
+          await emailjs.send(serviceId, templateId, values, userId);
           alert('Message sent correctly!');
         } catch (e) {
-          console.log(e);
+          alert('Unexpected error, try again later');
         }
 
         setIsSubmitting(false);
