@@ -1,10 +1,13 @@
 'use client';
 
+import { useState } from 'react';
 import { Field, Formik } from 'formik';
 import emailjs from '@emailjs/browser';
 import { getFormErrors } from '@/helpers/getFormErrors';
 
 const ContactForm = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   return (
     <Formik
       initialValues={{
@@ -13,6 +16,7 @@ const ContactForm = () => {
         message: '',
       }}
       onSubmit={async (values) => {
+        setIsSubmitting(true);
         const serviceId: any = process.env.NEXT_PUBLIC_EMAILJS_GMAIL_ID;
         const templateId: any = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
         const userId: any = process.env.NEXT_PUBLIC_EMAILJS_USER_ID;
@@ -23,9 +27,12 @@ const ContactForm = () => {
             values,
             userId
           );
+          alert('Message sent correctly!');
         } catch (e) {
           console.log(e);
         }
+
+        setIsSubmitting(false);
       }}
       validate={getFormErrors}
       validateOnChange={false}
@@ -45,6 +52,7 @@ const ContactForm = () => {
               value={props.values.name}
               className='contact-input'
               onChange={props.handleChange}
+              disabled={isSubmitting}
             />
             <span className='form-error'>{props.errors.name}</span>
           </div>
@@ -57,6 +65,7 @@ const ContactForm = () => {
               value={props.values.email}
               className='contact-input'
               onChange={props.handleChange}
+              disabled={isSubmitting}
             />
             <span className='form-error'>{props.errors.email}</span>
           </div>
@@ -70,13 +79,14 @@ const ContactForm = () => {
               value={props.values.message}
               className='contact-input py-3'
               onChange={props.handleChange}
+              disabled={isSubmitting}
             />
 
             <span className='form-error'>{props.errors.message}</span>
           </div>
 
-          <button className='form-btn' type='submit'>
-            Send Message
+          <button className='form-btn' type='submit' disabled={isSubmitting}>
+            {isSubmitting ? 'Sending...' : 'Send Message'}
           </button>
         </form>
       )}
