@@ -1,34 +1,15 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import { usePathname } from 'next/navigation';
-
 import Image from 'next/image';
 import Link from 'next/link';
+import NavLink from './NavLink';
+import useNavbarControl from '@/hooks/useNavbarControl';
 
 import logo from '../../public/logo.svg';
 import menuIcon from '../../public/icons/menu.png';
-import NavLink from './NavLink';
 
-//TODO: Add animation when showing mobile navbar
 const Navbar = () => {
-  const [showNavbar, setShowNavbar] = useState<boolean>(false);
-  const path = usePathname();
-
-  useEffect(() => {
-    const position = localStorage.getItem('homeScrollPosition');
-
-    if (!position || path !== '/') return;
-
-    scrollTo(0, Number(position));
-    console.log('scroll');
-  }, [path]);
-
-  useEffect(() => {
-    window.addEventListener('pagehide', () => {
-      localStorage.removeItem('homeScrollPosition');
-    });
-  }, []);
+  const { path, setShowNavbar, showNavbar } = useNavbarControl();
 
   return (
     <nav
