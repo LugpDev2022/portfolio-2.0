@@ -6,8 +6,8 @@ import emailIcon from '../../../public/icons/email.png';
 import whatsappIcon from '../../../public/icons/whatsapp.png';
 import linkedinIcon from '../../../public/icons/linkedin.png';
 
-const page = () => (
-  <div className='animate__animated animate__fadeIn py-12'>
+const Services = () => (
+  <main className='animate__animated animate__fadeIn py-12'>
     <h3 className='subtitle text-center block mb-10'>My services</h3>
 
     <div className='flex justify-evenly flex-wrap'>
@@ -59,7 +59,7 @@ const page = () => (
       </div>
       <ContactForm />
     </div>
-  </div>
+  </main>
 );
 
-export default page;
+export default Services;

@@ -3,8 +3,8 @@
 import Project from '@/components/Project';
 import projectsArray from '@/projectsArray';
 
-const page = () => (
-  <div className='min-h-[calc(100vh-112px)] flex items-center justify-center'>
+const Portfolio = () => (
+  <main className='min-h-[calc(100vh-112px)] flex items-center justify-center'>
     <div
       className={`
         animate__animated
@@ -24,7 +24,7 @@ const page = () => (
         <Project key={project.title} {...project} />
       ))}
     </div>
-  </div>
+  </main>
 );
 
-export default page;
+export default Portfolio;

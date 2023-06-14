@@ -9,7 +9,7 @@ import HomeButton from '@/components/HomeButton';
 
 export default function Home() {
   return (
-    <div className='animate__animated animate__fadeIn'>
+    <main className='animate__animated animate__fadeIn'>
       <div
         className='
           flex
@@ -96,6 +96,6 @@ export default function Home() {
           <HomeButton href='/services'>Explore my services</HomeButton>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
