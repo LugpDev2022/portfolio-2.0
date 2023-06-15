@@ -1,4 +1,4 @@
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 
 interface Props {
   children: React.ReactNode;
@@ -12,6 +12,7 @@ interface Props {
   subtitle: string;
 }
 
+//TODO: Adjust fonts
 const AboutSectionContainer: React.FC<Props> = ({
   children,
   className = '',

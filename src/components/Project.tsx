@@ -15,7 +15,7 @@ const Project: React.FC<Props> = ({ githubUrl, image, title, demoUrl }) => (
       p-4
       pt-6
       rounded-tr-[15px] 
-      rounded-lb-[15px]
+      rounded-bl-[15px]
       rounded-tl-[50px]
       rounded-br-[50px]
       hover:shadow-lg
