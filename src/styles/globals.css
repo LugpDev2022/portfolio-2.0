@@ -14,11 +14,14 @@
 }
 
 .btn-primary {
+  align-items: center;
   background-color: #4c837a;
   border-radius: 25px;
   color: white;
+  display: flex;
   font-weight: bold;
   height: 44px;
+  justify-content: center;
   text-align: center;
   transition: 300ms;
   width: 100%;
@@ -47,17 +50,17 @@
 }
 
 .input-label {
-  position: absolute;
-  top: -10px;
-  left: 32px;
   background-color: #e1ddbf;
-  padding: 0 5px;
   border-left: 2px solid #4c837a;
   border-right: 2px solid #4c837a;
+  color: #4c837a;
   font-size: 14px;
   font-weight: bold;
+  left: 32px;
   letter-spacing: 2px;
-  color: #4c837a;
+  padding: 0 5px;
+  position: absolute;
+  top: -10px;
 }
 .contact-input::placeholder {
   color: #85bab1;

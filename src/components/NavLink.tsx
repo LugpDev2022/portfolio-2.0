@@ -6,45 +6,34 @@ interface NavLinkProps {
   path: string;
 }
 
-const NavLink: React.FC<NavLinkProps> = ({ children, href, path }) => {
-  const handleClick = () => {
-    if (path !== '/') return;
-
-    localStorage.setItem('homeScrollPosition', scrollY.toString());
-  };
-
-  return (
-    <li
-      className='mt-4 sm:mt-0 flex flex-col justify-center'
-      onClick={handleClick}
-    >
-      {path === href ? (
-        <span
-          className='
+const NavLink: React.FC<NavLinkProps> = ({ children, href, path }) => (
+  <li className='mt-4 sm:mt-0 flex flex-col justify-center'>
+    {path === href ? (
+      <span
+        className='
           text-[#4C837A]
           hover:text-[#4C837A] 
           transition 
           duration-200
           cursor-pointer
         '
-        >
-          {children}
-        </span>
-      ) : (
-        <Link
-          className='
+      >
+        {children}
+      </span>
+    ) : (
+      <Link
+        className='
           text-[#85BAB1]
           hover:text-[#4C837A]
           transition 
           duration-200
         '
-          href={href}
-        >
-          {children}
-        </Link>
-      )}
-    </li>
-  );
-};
+        href={href}
+      >
+        {children}
+      </Link>
+    )}
+  </li>
+);
 
 export default NavLink;

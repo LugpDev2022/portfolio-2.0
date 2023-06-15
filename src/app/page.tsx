@@ -1,11 +1,12 @@
+import Image from 'next/image';
+import Link from 'next/link';
+
 import AboutSectionContainer from '@/components/AboutSectionContainer';
 import SkillsetRoulette from '@/components/SkillsetRoulette';
-import Image from 'next/image';
 
 import profilePhoto from '../../public/assets/profile.png';
 import aboutImage from '../../public/assets/about.png';
 import languagesImage from '../../public/assets/languages.png';
-import HomeButton from '@/components/HomeButton';
 
 export default function Home() {
   return (
@@ -92,8 +93,12 @@ export default function Home() {
             md:gap-10
           '
         >
-          <HomeButton href='/portfolio'>Check out my work</HomeButton>
-          <HomeButton href='/services'>Explore my services</HomeButton>
+          <Link href='/portfolio' className='btn-primary'>
+            Check out my work
+          </Link>
+          <Link href='/services' className='btn-primary'>
+            Explore my services
+          </Link>
         </div>
       </div>
     </main>
