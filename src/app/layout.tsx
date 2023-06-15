@@ -5,7 +5,6 @@ import 'animate.css';
 
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
-import GoUpBtn from '@/components/GoUpBtn';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -26,8 +25,6 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
-
-        <GoUpBtn />
       </body>
     </html>
   );
