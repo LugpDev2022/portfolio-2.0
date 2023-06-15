@@ -2,19 +2,18 @@ import ContactCard from '@/components/ContactCard';
 import ServiceCard from '@/components/ServiceCard';
 import ContactForm from '@/components/ContactForm';
 
+import {
+  designService,
+  developmentService,
+  maintenanceService,
+} from '@/servicesFeatures';
+
 import emailIcon from '../../../public/icons/email.png';
 import whatsappIcon from '../../../public/icons/whatsapp.png';
 import linkedinIcon from '../../../public/icons/linkedin.png';
 import wwwIcon from '../../../public/icons/wwwIcon.png';
 import nutIcon from '../../../public/icons/nutIcon.png';
-
-const features = [
-  'feature 1',
-  'feature 2',
-  'feature 3',
-  'feature 4',
-  'feature 5',
-];
+import designIcon from '../../../public/icons/designIcon.png';
 
 const Services = () => (
   <main className='animate__animated animate__fadeIn py-12'>
@@ -35,17 +34,17 @@ const Services = () => (
       '
     >
       <ServiceCard
-        features={[...features, 'xd', 'xd', 'xd', 'xd']}
+        {...designService}
         serviceName='UI/UX Design'
-        icon={wwwIcon}
+        icon={designIcon}
       />
       <ServiceCard
-        features={features}
+        {...developmentService}
         serviceName='Web Development'
         icon={wwwIcon}
       />
       <ServiceCard
-        features={features}
+        {...maintenanceService}
         serviceName='Code Maintenance'
         icon={nutIcon}
       />
