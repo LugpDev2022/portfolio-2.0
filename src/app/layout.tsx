@@ -8,10 +8,10 @@ import Navbar from '@/components/Navbar';
 
 const inter = Inter({ subsets: ['latin'] });
 
-//TODO: Create a page description
 export const metadata = {
   title: 'Luis Alberto Cervantes García',
-  description: '',
+  description:
+    'Welcome to my exceptional website, where you can explore my portfolio, discover the range of services I offer, and gain valuable insights about me.',
 };
 
 export default function RootLayout({
