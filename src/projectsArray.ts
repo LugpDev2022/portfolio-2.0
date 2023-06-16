@@ -1,8 +1,11 @@
 import { StaticImageData } from 'next/image';
 
 import todoApp from '../public/projects/todoApp.png';
-import adviceApp from '../public/projects/todoApp.png';
-import timeApp from '../public/projects/todoApp.png';
+import adviceApp from '../public/projects/adviceApp.png';
+import timeApp from '../public/projects/timeApp.png';
+import calculator from '../public/projects/calculator.png';
+import newspage from '../public/projects/newspage.png';
+import notFound from '../public/projects/notFound.png';
 
 type Project = {
   title: string;
@@ -31,22 +34,22 @@ const projectsArray: Array<Project> = [
     githubUrl: 'https://github.com/LugpDev2022/time-app',
   },
   {
-    title: 'Test',
-    image: timeApp,
-    demoUrl: 'https://time-app-lugpdev2022.netlify.app/',
-    githubUrl: 'https://github.com/LugpDev2022/time-app',
+    title: 'Calculator',
+    image: calculator,
+    demoUrl: 'https://lugp-calculator.netlify.app/',
+    githubUrl: 'https://github.com/LugpDev2022/calculator',
   },
   {
-    title: 'Test2',
-    image: timeApp,
-    demoUrl: 'https://time-app-lugpdev2022.netlify.app/',
-    githubUrl: 'https://github.com/LugpDev2022/time-app',
+    title: 'News Page',
+    image: newspage,
+    demoUrl: 'https://news-page-lugpdev2022.netlify.app/',
+    githubUrl: 'https://github.com/LugpDev2022/news-page',
   },
   {
-    title: 'Test3',
-    image: timeApp,
-    demoUrl: 'https://time-app-lugpdev2022.netlify.app/',
-    githubUrl: 'https://github.com/LugpDev2022/time-app',
+    title: '404 Not Found',
+    image: notFound,
+    demoUrl: 'https://lugpdev2022-404.netlify.app/',
+    githubUrl: 'https://github.com/LugpDev2022/404-not-found',
   },
 ];
 
