@@ -48,8 +48,8 @@ const projectsArray: Array<Project> = [
   {
     title: '404 Not Found',
     image: notFound,
-    demoUrl: 'https://lugpdev2022-404.netlify.app/',
-    githubUrl: 'https://github.com/LugpDev2022/404-not-found',
+    demoUrl: 'https://lugp-not-found.netlify.app/',
+    githubUrl: 'https://github.com/LugpDev2022/not-found',
   },
 ];
 
